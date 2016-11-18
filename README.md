@@ -18,3 +18,7 @@ Once this is done, you can verify SQL Server is running by typing
 
 After that just connect to it on localhost like you would any other SQL Server
 instance.
+
+You can optionally install SQL Server Tools by SSHing into the machine and
+typing `sudo apt-get install mssql-tools` (There are a few EULA screen otherwise
+I would have done this for you automatically)
