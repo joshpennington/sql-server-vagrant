@@ -5,11 +5,11 @@ curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list > /etc/apt/sources.list.d/mssql-server.list
 
 echo -e "\n--- Updating System ---\n"
-apt-get update > /dev/null 2>&1
-apt-get upgrade > /dev/null 2>&1
+sudo apt-get update > /dev/null 2>&1
+sudo apt-get upgrade > /dev/null 2>&1
 
 echo -e "\n--- Installing Microsoft SQL Server ---\n"
-apt-get install -y mssql-server > /dev/null 2>&1
+sudo apt-get install -y mssql-server > /dev/null 2>&1
 
 echo -e "\n--- Install Complete FOLLOW THESE INSTRUCTIONS ---\n"
 
