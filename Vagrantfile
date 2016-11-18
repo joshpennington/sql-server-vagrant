@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "bento/ubuntu-16.04"
   config.vm.provision :shell, path: "bootstrap.sh"
-  config.vm.network :forwarded_port, guest: 1433, host:14330
+  config.vm.network :forwarded_port, guest: 1433, host:1433
 
   config.vm.synced_folder "./", "/vagrant", create:true, :owner => "vagrant", :group => "vagrant", :mount_options => ["dmode=775","fmode=664"]
 
