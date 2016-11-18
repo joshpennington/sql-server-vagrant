@@ -2,13 +2,19 @@
 
 Lets you try out SQL Server for Linux (Ubuntu 16.04) the easiest way possible.
 
-Just `vagrant up` to get started. Once running, SSH into the VM and type:
+Just navigate to the repository's cloned directory and type `vagrant up` to get
+started.
 
-sudo /opt/mssql/bin/sqlservr-setup
+Once you are up and running you have to ssh into the VM and run the setup for
+SQL Server. This is accomplished by typing `vagrant ssh` and then
+`sudo /opt/mssql/bin/sqlservr-setup`
 
-To verify if the service is running type:
+You will then be asked to accept the EULA, assign the password for the sa user,
+if you want to start SQL Server and then finally if you want it to start
+automatically.
 
-systemctl status mssql-server
+Once this is done, you can verify SQL Server is running by typing
+`systemctl status mssql-server`
 
-Unfortunately there is not a way to automatically setup SQL Server so you have
-to enter the commands up top.
+After that just connect to it on localhost like you would any other SQL Server
+instance.
